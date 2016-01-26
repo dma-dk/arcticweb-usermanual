@@ -1,6 +1,7 @@
 {
     "name": "arcticweb-usermanual",
     "version": "0.0.5",
+    "license" : "SEE LICENSE IN LICENSE.txt",
     "scripts": {
       "build": "grunt build"
     },
