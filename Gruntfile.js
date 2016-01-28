@@ -154,7 +154,6 @@ module.exports = function (grunt) {
             options : {
                 tag : false,
                 pushTags: false,
-                folder : "dist",
                 github: {
                     accessTokenVar: "GITHUB_ACCESS_TOKEN"
                 }
