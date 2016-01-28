@@ -1,6 +1,6 @@
 {
   "name": "arcticweb-usermanual",
-  "version": "0.0.9",
+  "version": "0.0.7",
   "license": "SEE LICENSE IN LICENSE.txt",
   "repository": {
     "type": "git",
@@ -8,8 +8,7 @@
   },
   "scripts": {
     "build": "npm prune | grunt build",
-    "snapshot-dist": "semver.inc('0.0.7', 'prerelease', 'SNAPSHOT')",
-    "distdist": "npm-snapshot 1"
+    "deploy-snapshot": "npm prune | grunt build | grunt bump:prerelease"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

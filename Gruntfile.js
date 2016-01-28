@@ -76,7 +76,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: '<%= proj.build %>',
-                        src: ['{,*/}*.html', '{,*/}*.css', 'img/{,*/}*'],
+                        src: ['{,*/}*.*'],
                         dest: '<%= proj.dist %>'
                     }
                 ]
@@ -125,16 +125,13 @@ module.exports = function (grunt) {
                 basePath: 'app'
             },
             usermanual: {
-                dest: '<%= proj.dist %>/usermanual.appcache',
+                dest: '<%= proj.build %>/usermanual.appcache',
                 cache: {
                     literals: [//as is in the "CACHE:" section
                         'css/cached/cdn.netdna/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0',
-                        'docs/index.html',
-                        'docs/doc.css'
                     ],
                     patterns: [
-                       	'app/cached/**',
-                        'app/img/**',
+                       	'app/**',
                     ]
                 },
                 network: "*"
@@ -145,6 +142,14 @@ module.exports = function (grunt) {
             // test : [ 'coffee', 'copy:styles' ],
             build: [ 'copy:styles2Build', 'copy:html2Build' ]
         },
+        bump : {
+            options : {
+                createTag : false,
+                commit : false,
+                push: false
+
+            }
+        }
     });
 
     // Load the plugin that provides the "uglify" task.
@@ -158,6 +163,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-connect-proxy');
     grunt.loadNpmTasks('grunt-text-replace');
     grunt.loadNpmTasks('grunt-appcache');
+    grunt.loadNpmTasks('grunt-bump');
 
     grunt.registerTask('server',
         function (target) {
