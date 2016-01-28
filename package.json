@@ -1,6 +1,6 @@
 {
   "name": "arcticweb-usermanual",
-  "version": "0.0.8-1",
+  "version": "0.0.10-0",
   "license": "SEE LICENSE IN LICENSE.txt",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "npm prune | grunt build",
-    "deploy-snapshot": "npm prune | grunt build | grunt bump:prerelease"
+    "deploy-snapshot": "npm prune | grunt build | grunt release:prerelease --npmtag canary"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
