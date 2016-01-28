@@ -149,6 +149,16 @@ module.exports = function (grunt) {
                 push: false
 
             }
+        },
+        release : {
+            options : {
+                tag : false,
+                pushTags: false,
+                folder : "dist",
+                github: {
+                    accessTokenVar: "GITHUB_ACCESS_TOKEN"
+                }
+            }
         }
     });
 
@@ -164,6 +174,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-text-replace');
     grunt.loadNpmTasks('grunt-appcache');
     grunt.loadNpmTasks('grunt-bump');
+    grunt.loadNpmTasks('grunt-release');
 
     grunt.registerTask('server',
         function (target) {
