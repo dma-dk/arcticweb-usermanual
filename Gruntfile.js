@@ -142,14 +142,6 @@ module.exports = function (grunt) {
             // test : [ 'coffee', 'copy:styles' ],
             build: [ 'copy:styles2Build', 'copy:html2Build' ]
         },
-        bump : {
-            options : {
-                createTag : false,
-                commit : false,
-                push: false
-
-            }
-        },
         release : {
             options : {
                 tag : false,
