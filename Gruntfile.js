@@ -147,7 +147,8 @@ module.exports = function (grunt) {
                 tag : false,
                 pushTags: false,
                 github: {
-                    accessTokenVar: "GITHUB_ACCESS_TOKEN"
+                    accessTokenVar: "GITHUB_ACCESS_TOKEN",
+                    repo: "maritime-web/arcticweb-usermanual"
                 }
             }
         }
