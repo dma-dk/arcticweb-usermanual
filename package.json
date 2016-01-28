@@ -4,7 +4,7 @@
     "license" : "SEE LICENSE IN LICENSE.txt",
     "repository" : {
       "type" : "git",
-      "url" : "https://github.com/dma-dk/arcticweb-usermanual.git"
+      "url" : "https://github.com/maritime-web/arcticweb-usermanual.git"
     },
     "scripts": {
       "build": "grunt build"
