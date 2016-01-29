@@ -165,7 +165,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-connect-proxy');
     grunt.loadNpmTasks('grunt-text-replace');
     grunt.loadNpmTasks('grunt-appcache');
-    grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-release');
 
     grunt.registerTask('server',
