@@ -148,10 +148,6 @@ module.exports = function (grunt) {
                 pushTags: false,
                 npm: false,
                 npmtag : false,
-                github: {
-                    accessTokenVar: "GITHUB_ACCESS_TOKEN",
-                    repo: "maritime-web/arcticweb-usermanual"
-                }
             }
         }
     });
