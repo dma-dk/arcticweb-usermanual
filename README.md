@@ -12,7 +12,9 @@ npm install arcticweb-usermanual --save
 ```
 
 ## Requirements
-node.js, npm and grunt-cli must be installed globally.
+[node.js](https://nodejs.org/en/), npm and grunt-cli must be installed globally.
+- See [guidelines for installation of node.js and npm](https://docs.npmjs.com/getting-started/installing-node).
+- See [getting started](http://gruntjs.com/getting-started) for how to install grunt-cli.
 
 ## Distribution
 The distribution build for the user manual is put in the dist folder. The build is made by
