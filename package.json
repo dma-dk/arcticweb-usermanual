@@ -9,7 +9,7 @@
   "scripts": {
     "build": "npm prune | grunt build",
     "package": "npm prune | grunt build | grunt maven_deploy:install",
-    "deploy-release": "npm prune | grunt build | grunt maven_deploy:release"
+    "deploy-release": "npm prune | grunt build | grunt maven_deploy:deploy"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

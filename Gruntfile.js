@@ -164,9 +164,9 @@ module.exports = function (grunt) {
             },
             'deploy': {
                 options: {
-                    url: 'dav:https://repository-dma.forge.cloudbees.com/release/',
-                    repositoryId:'dma-release-repository',
-                    snapshot: false,
+                    url: 'dav:https://repository-dma.forge.cloudbees.com/snapshot/',
+                    repositoryId:'dma-snapshot-repository',
+                    snapshot: true,
                 },
                 files: [{expand: true, cwd: 'dist/', src: ['**/*.*'], dest: 'docs'}],
             }
