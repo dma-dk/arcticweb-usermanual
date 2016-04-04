@@ -146,8 +146,29 @@ module.exports = function (grunt) {
             options : {
                 tag : false,
                 pushTags: false,
-                npm: false,
-                npmtag : false,
+                tagName: 'hep hey-<%= version %>'
+            }
+        },
+        maven_deploy:{
+            options: {
+                groupId: 'dk.dma.arcticweb',
+                packaging: 'war',
+                injectDestFolder: false
+            },
+            install : {
+                options : {
+                    snapshot: true,
+                },
+                files: [{expand: true, cwd: 'dist/', src: ['**/*.*'], dest: 'docs'}],
+
+            },
+            'deploy': {
+                options: {
+                    url: 'dav:https://repository-dma.forge.cloudbees.com/release/',
+                    repositoryId:'dma-release-repository',
+                    snapshot: false,
+                },
+                files: [{expand: true, cwd: 'dist/', src: ['**/*.*'], dest: 'docs'}],
             }
         }
     });
@@ -164,18 +185,16 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-text-replace');
     grunt.loadNpmTasks('grunt-appcache');
     grunt.loadNpmTasks('grunt-release');
+    grunt.loadNpmTasks('grunt-maven-deploy');
 
     grunt.registerTask('server',
         function (target) {
-            if (target === 'dist') {
-                return grunt.task.run([ 'build', 'connect:dist:keepalive' ]);
-            }
-
             grunt.task.run([ 'copy:all2Livereload', /* 'autoprefixer', */'configureProxies', 'connect:livereload',
                 'watch' ]);
         });
 
     grunt.registerTask('build', ['clean', 'copy:toBuild', 'appcache:usermanual', 'replace:run', 'copy:toDist']);
+
 
     // 'clean:dist',
     // 'useminPrepare',

@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build": "npm prune | grunt build",
-    "deploy-snapshot": "npm prune | grunt build | grunt release:prerelease"
+    "package": "npm prune | grunt build | grunt maven_deploy:install",
+    "deploy-release": "npm prune | grunt build | grunt maven_deploy:release"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
@@ -22,6 +23,7 @@
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt-contrib-uglify": "~0.9.1",
     "grunt-contrib-watch": "~0.6.1",
+    "grunt-maven-deploy": "^0.2.1",
     "grunt-release": "^0.13.0",
     "grunt-text-replace": "~0.4.0",
     "path": "~0.4.9"
