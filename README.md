@@ -1,39 +1,64 @@
 # arcticweb-usermanual
-User manual for the ArcticWeb application.
+User manual for the ArcticWeb application. The user manual is a simple HTML page being accompanied
+by CSS, JS and images. The user manual has been separated from the ArcticWeb application, because it is
+important, that ArcticWeb users are only downloading the user manual upon first access or after an update.
+This is ensured by maintaining the user manual in a separate project and only generating the usermanual.appcache
+file upon changes to the user manual (in this project).
 
-You can include the arcticweb-usermanual in your own project. Add it as a npm dependency. E.g.
+## Usage
+The ArcticWeb user manual is build and distributed as a war file. Include it in another web project by adding
+the following dependency (in another maven web application project)
 
 ```
-npm install arcticweb-usermanual
+<dependency>
+	<groupId>dk.dma.arcticweb</groupId>
+	<artifactId>arcticweb-usermanual</artifactId>
+	<version>2.3</version>
+	<type>war</type>
+</dependency>
 ```
-or
+
+And a overlay configuration to the maven-war-plugin
+
 ```
-npm install arcticweb-usermanual --save
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-war-plugin</artifactId>
+	<version>2.4</version>
+    <configuration>
+        ...
+		<overlays>
+			<overlay>
+				<groupId>dk.dma.arcticweb</groupId>
+				<artifactId>arcticweb-usermanual</artifactId>
+			</overlay>
+		</overlays>
+	</configuration>
+</plugin>
 ```
 
 ## Requirements
-[node.js](https://nodejs.org/en/), npm and grunt-cli must be installed globally.
-- See [guidelines for installation of node.js and npm](https://docs.npmjs.com/getting-started/installing-node).
-- See [getting started](http://gruntjs.com/getting-started) for how to install grunt-cli.
+[Maven 3.1 or higher](https://maven.apache.org/) is required to build a new war file.
 
-## Distribution
-The distribution build for the user manual is put in the dist folder. The build is made by
-```
-grunt build
-```
-or
-```
-npm build
-```
+An optional possibility is to view changes to the user manual in the browser using the
+Livereload Grunt plugin This requires additional installation of
+ * [node.js](https://nodejs.org/en/)
+ * [npm] (https://www.npmjs.com/)
+ * See [getting started](http://gruntjs.com/getting-started) for how to install grunt-cli.
 
-## Releases
- TODO
 
 ## Continuous Integration
 A Jenkins build job has been setup to continuously build and release the latest version of the user manual.
 https://dma.ci.cloudbees.com/view/MaritimeWeb/job/arcticweb-usermanual/
 
 
+## Building
+Manipulation of HTML, CSS, JS and generation of usermanual.appcache are performed as part of the Maven
+build, e.g. execute:
+```
+mvn clean package
+
+```
 
 ## Live reload - See changes instantly
 While performing changes on the sources files you can choose to see the (almost) final result instantly.
@@ -41,4 +66,10 @@ This is done by starting the live reload server, which will server the source fi
 ```
 grunt server
 ```
-T
+For this to work you will need to have installed node.js, NPM and grunt-cli globally (se requirements).
+
+## Releases
+ TODO
+
+
+
