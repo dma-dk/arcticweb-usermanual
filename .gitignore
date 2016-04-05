@@ -1,3 +1,5 @@
+.idea
 .tmp
-build
+node
 node_modules
+target

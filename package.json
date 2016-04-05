@@ -1,16 +1,7 @@
 {
   "name": "arcticweb-usermanual",
-  "version": "2.3.1",
+  "version": "0.0.1",
   "license": "SEE LICENSE IN LICENSE.txt",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/maritime-web/arcticweb-usermanual.git"
-  },
-  "scripts": {
-    "build": "npm prune | grunt build",
-    "package": "npm prune | grunt build | grunt maven_deploy:install",
-    "deploy-release": "npm prune | grunt build | grunt maven_deploy:deploy"
-  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-appcache": "~0.1.8",
@@ -24,9 +15,6 @@
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt-contrib-uglify": "~0.9.1",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-maven-deploy": "^0.2.1",
-    "grunt-release": "^0.13.0",
-    "grunt-release-it": "^1.0.1",
     "grunt-text-replace": "~0.4.0",
     "path": "~0.4.9"
   }

@@ -128,10 +128,11 @@ module.exports = function (grunt) {
                 dest: '<%= proj.build %>/usermanual.appcache',
                 cache: {
                     literals: [//as is in the "CACHE:" section
-                        'css/cached/cdn.netdna/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0',
+                        'cached/cdn.netdna/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0',
                     ],
                     patterns: [
                        	'src/main/webapp/**',
+                        '!src/main/webapp/WEB-INF/**'
                     ]
                 },
                 network: "*"
@@ -194,9 +195,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-connect-proxy');
     grunt.loadNpmTasks('grunt-text-replace');
     grunt.loadNpmTasks('grunt-appcache');
-    grunt.loadNpmTasks('grunt-release');
-    grunt.loadNpmTasks('grunt-maven-deploy');
-    grunt.loadNpmTasks('grunt-release-it');
 
     grunt.registerTask('server',
         function (target) {
@@ -205,23 +203,6 @@ module.exports = function (grunt) {
         });
 
     grunt.registerTask('build', ['clean', 'copy:toBuild', 'appcache:usermanual', 'replace:run', 'copy:toDist']);
-
-
-    // 'clean:dist',
-    // 'useminPrepare',
-    // 'concurrent:dist',
-    // 'autoprefixer',
-    // 'concat',
-    // 'copy:dist',
-    // 'ngmin',
-    // 'cssmin',
-    // 'uglify',
-    // 'rev',
-    // 'usemin'
-
-    // grunt.registerTask('build', [ 'clean:dist', 'useminPrepare',
-    // 'concurrent:dist', 'autoprefixer', 'concat',
-    // 'copy:dist', 'ngmin', 'cssmin', 'uglify', 'rev', 'usemin' ]);
 
     grunt.registerTask('default', [ 'build' ]);
 
