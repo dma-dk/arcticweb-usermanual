@@ -24,10 +24,10 @@ module.exports = function (grunt) {
     grunt.initConfig({
         proj: {
             name: grunt.file.readJSON('package.json').name,
-            src: 'app',
-            build: 'build',
+            src: 'src/main/webapp',
+            build: 'target/build',
             livereload: '.tmp/livereload',
-            dist: 'dist'
+            dist: 'target/webapp/docs'
         },
         watch: {
             webapp: {
@@ -122,7 +122,7 @@ module.exports = function (grunt) {
         },
         appcache: {
             options: {
-                basePath: 'app'
+                basePath: 'src/main/webapp'
             },
             usermanual: {
                 dest: '<%= proj.build %>/usermanual.appcache',
@@ -131,7 +131,7 @@ module.exports = function (grunt) {
                         'css/cached/cdn.netdna/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0',
                     ],
                     patterns: [
-                       	'app/**',
+                       	'src/main/webapp/**',
                     ]
                 },
                 network: "*"
@@ -170,8 +170,18 @@ module.exports = function (grunt) {
                 },
                 files: [{expand: true, cwd: 'dist/', src: ['**/*.*'], dest: 'docs'}],
             }
+        },
+        'release-it': {
+            options: {
+                pkgFiles: ['package.json'],
+                commitMessage: 'Release %s',
+                tagName: '%s',
+                tagAnnotation: 'Release %s',
+                buildCommand: false
+            }
         }
     });
+
 
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -186,6 +196,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-appcache');
     grunt.loadNpmTasks('grunt-release');
     grunt.loadNpmTasks('grunt-maven-deploy');
+    grunt.loadNpmTasks('grunt-release-it');
 
     grunt.registerTask('server',
         function (target) {
