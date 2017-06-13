@@ -34,42 +34,36 @@
 }
 
 @media print {
-	body {
-		font-size: 120%;
-		font-size: 12pt;
-		line-height: 18pt;
-	}
-	body #container-fluid {
-		margin: 1in 1.2in .5in 1.2in;
-	}
+	html, body, #Top {
+        width: 100%;
+    }
+    .navbar, div[role="complementary"] {
+        display: none;!important;
+    }
+
 	.page-break-before-this {
 		page-break-before: always;
-	}
-	.title-print {
-		font-size: 300%;
 	}
 }
 
 @media screen {
 	
 	body {
-		font-family: "Arial";
-	}
-	div[role="main"] {
-		width:75%; 
-		float: right;	
+		font-family: "Arial", sans-serif;
 	}
 	.content{
 		margin-top: 30px;
   		margin-bottom: 30px;
 	}
 	.main-menu-item {
-		font-size: 175%;
 		font-weight: bold;
 	}
-	.sub-menu-item {
-		font-size: 150%;
+    .sub-menu {
+        padding-left: 0;
+    }
+	.sub-menu li {
 		margin-left: 15px;
+        font-weight: normal;
 	}
 	p {
 		margin-bottom: 0.08in;
@@ -91,14 +85,13 @@
 	h1.western {
 		font-family: "Arial", sans-serif;
 		font-size: 14pt;
-		so-language: da-DK
 	}
 	h1.cjk {
-		font-family: "Arial";
+		font-family: "Arial", sans-serif;
 		font-size: 14pt
 	}
 	h1.ctl {
-		font-family: "Arial";
+		font-family: "Arial", sans-serif;
 		font-size: 14pt
 	}
 	h2 {
@@ -114,14 +107,13 @@
 	h2.western {
 		font-family: "Arial", sans-serif;
 		font-size: 13pt;
-		so-language: da-DK
 	}
 	h2.cjk {
-		font-family: "Arial";
+		font-family: "Arial", sans-serif;
 		font-size: 13pt
 	}
 	h2.ctl {
-		font-family: "Arial";
+		font-family: "Arial", sans-serif;
 		font-size: 13pt
 	}
 	h3 {
@@ -137,32 +129,41 @@
 	h3.western {
 		font-family: "Arial", sans-serif;
 		font-size: 12pt;
-		so-language: da-DK
 	}
 	h3.cjk {
-		font-family: "Arial";
+		font-family: "Arial", sans-serif;
 		font-size: 12pt
 	}
 	h3.ctl {
-		font-family: "Arial";
+		font-family: "Arial", sans-serif;
 		font-size: 12pt
 	}
-	a:link {
-		so-language: zxx
-	}
+    @media (min-width: 992px) {
+        .menu {
+            width: 230px;
+        }
+    }
+    @media (min-width: 1200px) {
+        .menu {
+            width: 290px;
+        }
+    }
 	.menu {
-		width: 20%;
 		height: 100%;
 		border-right: 1px solid #eeeeee;
+        top: 60px;
 		position: fixed;
-		float: left;
 	}
 	.menu>ul li {
-		/*margin: 0; */
 		list-style: none;
 		padding: 0;
 	}
 	.menu>ul li>a {
 		padding: 0;
+	}
+
+	img {
+		max-height: 100%;
+		max-width: 100%;
 	}
 }
