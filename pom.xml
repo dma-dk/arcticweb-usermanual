@@ -5,7 +5,8 @@
     <groupId>dk.dma.arcticweb</groupId>
     <artifactId>arcticweb-usermanual</artifactId>
     <packaging>war</packaging>
-    <version>2.6.7-SNAPSHOT</version>
+    <!-- static version number. Release versions don't get pushed to VCS -->
+    <version>1.0-Developer-SNAPSHOT</version>
     <name>ArcticWeb Usermanual</name>
     <description>User manual for ArcticWeb</description>
 
