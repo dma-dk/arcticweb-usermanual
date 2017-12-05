@@ -94,7 +94,7 @@
                         <a href="#Internet usage">Internet usage</a>
                     </li>
                     <li class="collapser main-menu-item">
-                        <a href="#Description of functionalities">Description of functionalities</a>
+                        <a href="#Description of functionalities">Feature description</a>
 
                         <ul class="sub-menu collapse">
                             <li class="collapser">
@@ -115,9 +115,6 @@
                                         <a href="#Own vessel functionalities">Own vessel functionalities</a>
                                     </li>
                                     <li>
-                                        <a href="#Historical Track – own vessel">Historical Track – own vessel</a>
-                                    </li>
-                                    <li>
                                         <a href="#Nearest Vessels">Nearest Vessels</a>
                                     </li>
                                     <li>
@@ -131,9 +128,6 @@
                                     </li>
                                     <li>
                                         <a href="#Integration with MarineTraffic.com">Integration with MarineTraffic.com</a>
-                                    </li>
-                                    <li>
-                                        <a href="#Historical Track – other vessels">Historical Track – other vessels</a>
                                     </li>
                                     <li>
                                         <a href="#Extra Information on Map – Clear All">Extra Information on Map – Clear All</a>
@@ -253,6 +247,49 @@
                                     </li>
                                     <li>
                                         <a href="#Setup Areas of Interest – edit">Setup Areas of Interest – edit</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="collapser">
+                                <a href="#SAR">SAR</a>
+                                <ul class="sub-menu collapse">
+                                    <li>
+                                        <a href="#Rapid response">Rapid response</a>
+                                    </li>
+                                    <li>
+                                        <a href="#Datum point">Datum point</a>
+                                    </li>
+                                    <li>
+                                        <a href="#Datum line">Datum line</a>
+                                    </li>
+                                    <li>
+                                        <a href="#Back track">Back track</a>
+                                    </li>
+                                    <li>
+                                        <a href="#Track line search">Track line search</a>
+                                    </li>
+                                    <li>
+                                        <a href="#Effort allocations">Effort allocations</a>
+                                    </li>
+                                    <li>
+                                        <a href="#SRU sub area">SRU sub area</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="collapser">
+                                <a href="#VRMT">Voyage Risk Management Tool</a>
+                                <ul class="sub-menu collapse">
+                                    <li>
+                                        <a href="#Adding assessment location">Adding assessment location</a>
+                                    </li>
+                                    <li>
+                                        <a href="#Making the assessment">Making the assessment</a>
+                                    </li>
+                                    <li>
+                                        <a href="#Assessment log">Assessment log</a>
+                                    </li>
+                                    <li>
+                                        <a href="#Risk factor configuration">Risk factor configuration</a>
                                     </li>
                                 </ul>
                             </li>
@@ -420,6 +457,11 @@
                             SAR functionality including the ability to calculate search areas and patterns based on standards and as coordinater assign search and rescue units to tasks during the effort.
                         </p>
                     </li>
+                    <li>
+                        <p>
+                            Voyage Risk Management Tool to evaluate risk before and during a voyage, primarily based on the work of Captain Leif Skog.
+                        </p>
+                    </li>
                 </ul>
                 <br/>
                 <p>The platform is intended for use by:</p>
@@ -579,24 +621,7 @@
                         <p>Click <i>Zoom to Your Vessel</i> to zoom to own vessel</p>
                     </li>
                 </ol>
-                <p><img src="img/i_b49dccc808cb4430_html_m117292eb.png"/></p>
-            </div>
-
-            <hr/>
-
-            <div class="content">
-                <ol start="5">
-                    <li>
-                        <p>Click <i>Switch Base Map</i> to change from basic chart (Single Vector Map) to full
-                            OpenStreetMap. Data volumes are increased quite a bit from basic chart to the full
-                            OpenStreetMap and it may be slower to use the OpenStreetMap.</p>
-                    </li>
-                </ol>
-                <p>If using Chrome as your browser you may turn on <i>Hardware acceleration</i> to improve performance.
-                </p>
-                <p><img src="img/i_b49dccc808cb4430_html_58c82c6e.png"/></p>
-                <i>Example of OpenStreetMap</i>
-                <p><img src="img/i_b49dccc808cb4430_html_m786149fb.png"/></p>
+                <p><img src="img/Vessels-full.png"/></p>
             </div>
 
             <hr/>
@@ -627,9 +652,6 @@
                 <p>- Additional information:</p>
                 <ul>
                     <li>
-                        <p>Historical Track.</p>
-                    </li>
-                    <li>
                         <p>Nearest Vessels – the distance in nm and time from the 5 vessels nearest to own vessel.
                             “Nearest” is based on the time to reach your vessel from other vessels in the area and is
                             calculated by using ArcticWeb Max Speed if this exists, if not we use Service Speed and if
@@ -658,15 +680,6 @@
             <!-- @print page break style -->
             <div class="page-break-before-this"></div>
             <hr/>
-
-            <div class="content">
-                <h3 id="Historical Track – own vessel">Historical Track – own vessel</h3>
-                <p>By clicking the <i>view</i> button on <i>Historical Track</i> the past track of the vessel is
-                    displayed. Positions are obtained from satellite and are updated every 1-6 hours, so the track may
-                    look a little bumpy and may cross over land.</p>
-                <p>Click the <i>Hide</i> button on <i>Historical Track</i> to hide past track.</p>
-                <p><img src="img/i_b49dccc808cb4430_html_6e486e3f.png"/></p>
-            </div>
 
             <!-- @print page break style -->
             <div class="page-break-before-this"></div>
@@ -732,17 +745,6 @@
                 <p>In the bottom of the View All window it is possible to search vessel at MarineTraffic.com, see
                     pictures and other available data.</p>
                 <p><img src="img/i_b49dccc808cb4430_html_9eeac07.png"/></p>
-            </div>
-
-            <!-- @print page break style -->
-            <div class="page-break-before-this"></div>
-            <hr/>
-
-            <div class="content">
-                <h3 id="Historical Track – other vessels">Historical Track – other vessels</h3>
-                <p>By clicking <i>view</i> button on <i>Historical Track</i> in Selected Vessel menu it is possible to
-                    see other vessels past track.</p>
-                <p><img src="img/i_b49dccc808cb4430_html_2b884cb.png"/></p>
             </div>
 
             <!-- @print page break style -->
@@ -1345,6 +1347,237 @@
                     Groups” button.</p>
                 <p><img src="img/i_b49dccc808cb4430_html_774da4c4.png"/></p>
             </div>
+
+            <!-- @print page break style -->
+            <div class="page-break-before-this"></div>
+            <hr/>
+
+            <div class="content">
+                <h2 id="SAR">SAR</h2>
+                <p>
+                    The SAR feature facilitates coordination and cooperation between SRU's during an SAR operation using
+                    terminology and methods from the IAMSAR manual.
+                </p>
+                <p>
+                    The feature supports search area calculations for five different SAR operation types.
+                </p>
+                <ul>
+                    <li>Rapid response</li>
+                    <li>Datum point</li>
+                    <li>Datum line</li>
+                    <li>Back track</li>
+                    <li>Track line search</li>
+                </ul>
+                <p>
+                    For all of the operation types the coordinator can manage effort allocations by including other
+                    vessels and calculating sub areas and search patterns for them.
+                </p>
+                <p>
+                    A message log is available to all SRU's in a operation allowing clear communication.
+                </p>
+            </div>
+
+            <!-- @print page break style -->
+            <div class="page-break-before-this"></div>
+            <hr/>
+
+            <div class="content">
+                <h3 id="Rapid response">Rapid response</h3>
+                <p>
+                    Rapid response should be used when the rescue vessel is within the designated search area in a relatively short time span, i.e. 1-2 hours after last known position (LKP).
+                </p>
+                <p>
+                    <img src="img/SAR-Rapid-response.png">
+                </p>
+            </div>
+
+            <!-- @print page break style -->
+            <div class="page-break-before-this"></div>
+            <hr/>
+
+            <div class="content">
+                <h3 id="Datum point">Datum point</h3>
+                <p>
+                    Datum point is a calculation method used when the rescue vessel arrives to the designated search
+                    area two hours or more later than the last known position (LKP) was reported.
+                </p>
+                <p>
+                    <img src="img/SAR-Datum-point.png">
+                </p>
+            </div>
+
+            <!-- @print page break style -->
+            <div class="page-break-before-this"></div>
+            <hr/>
+
+            <div class="content">
+                <h3 id="Datum line">Datum line</h3>
+                <p>
+                    Datum line is used when an object is missing and the last known position (LKP) is unknown, but an
+                    assumed route is known.
+                </p>
+                <p>
+                    <img src="img/SAR-Datum-line.png">
+                </p>
+            </div>
+
+            <!-- @print page break style -->
+            <div class="page-break-before-this"></div>
+            <hr/>
+
+            <div class="content">
+                <h3 id="Back track">Back track</h3>
+                <p>
+                    Back track is used when an object connected to the missing vessel has been located. By reversing the
+                    objects movements a possible search area can be established.
+                </p>
+                <p>
+                    <img src="img/SAR-Back-track.png">
+                </p>
+            </div>
+
+            <!-- @print page break style -->
+            <div class="page-break-before-this"></div>
+            <hr/>
+
+            <div class="content">
+                <h3 id="Track line search">Track line search</h3>
+                <p>
+                    Track line search is normally employed when an aircraft or vessel has disappeared without a trace
+                    while en route from one point to another. The track line search consists of a rapid and reasonably
+                    thorough search along the intended route of the distressed craft.
+                </p>
+                <p>
+                    <img src="img/SAR-Track-line-search.png">
+                </p>
+            </div>
+
+            <!-- @print page break style -->
+            <div class="page-break-before-this"></div>
+            <hr/>
+
+            <div class="content">
+                <h3 id="Effort allocations">Effort allocations</h3>
+                <p>
+                    The coordinator can add any number of Search and Rescue Units (SRU) to the operation.
+                </p>
+                <p>
+                    <img src="img/SAR-Effort-Allocation.png">
+                </p>
+                <p>
+                    For each SRU a sub area and search pattern can be calculated.
+                </p>
+                <p>
+                    <img src="img/SAR-Effort-Allocation-Manage-SRU.png">
+                </p>
+            </div>
+
+            <div class="content">
+                <h3 id="SRU sub area">SRU sub area</h3>
+                <p>
+                    SRU Sub areas can be moved around by draging it. The area can also be deformed by draging
+                    the dots on each side of the box. Please note that the area will always remain constant.
+                </p>
+                <p>
+                    <img src="img/SAR-Effort-Allocation-Manipulate-Sub-Area.png">
+                </p>
+            </div>
+
+            <div class="content">
+                <h2 id="VRMT">Voyage Risk Management Tool</h2>
+                <p>
+                    The tool is primarily targeted at vessels operating in remote areas wishing to assess risk along
+                    their route.
+                </p>
+                <p>
+                    The Voyage Risk Management Tool (VRMT) is primarily based on the work of Captain Leif Skog and his
+                    thoughts on Risk Management. The product design line (Interaction Design) on the Technical University in
+                    Trondheim has also given valuable suggestions on how to implement the tool in ArcticWeb.
+                </p>
+                <p>
+                    To make a risk assessment a number of locations along the route is chosen and each of them assessed
+                    according to the risk factors. Currently the assessment is done manually.
+                </p>
+                <p>
+                    The result of an assessment is a risk score. A number indicating whether the risk of a location is
+                    low, medium or high
+                </p>
+                <p>
+                    <img src="img/VRMT-Score-ranges.png">
+                </p>
+            </div>
+
+            <!-- @print page break style -->
+            <div class="page-break-before-this"></div>
+            <hr/>
+
+            <div class="content">
+                <h3 id="Adding assessment location">Adding assessment location</h3>
+                <p>
+                    Assessment locations are added by clicking the desired location on the route. An appropiate name
+                    can be assigned to the location.
+                </p>
+                <p>
+                    <img src="img/VRMT-New-location.png">
+                </p>
+            </div>
+
+            <!-- @print page break style -->
+            <div class="page-break-before-this"></div>
+            <hr/>
+
+            <div class="content">
+                <h3 id="Making the assessment">Making the assessment</h3>
+                <ul>
+                    <li>When starting a new assessment any locations not already passed on the route must be assessed.</li>
+                    <li>If the vessel is already on the route an assessment location on the vessels current position is automatically added</li>
+                    <li>If an location has been previously assessed it is prefilled with the old score</li>
+                    <li>When scoring the risk factors it is allowed to skip any factor not relevant for the given location.</li>
+
+                </ul>
+                <p>
+                    <img src="img/VRMT-New-assessment.png">
+                </p>
+                <p>
+                    <img src="img/VRMT-assessment-details.png">
+                </p>
+            </div>
+
+            <!-- @print page break style -->
+            <div class="page-break-before-this"></div>
+            <hr/>
+
+            <div class="content">
+                <h3 id="Assessment log">Assessment log</h3>
+                <p>
+                    Any previous assessment can be viewed in the log.
+                </p>
+                <p>
+                    <img src="img/VRMT-log-overview.png">
+                </p>
+                <p>
+                    <img src="img/VRMT-log-details.png">
+                </p>
+            </div>
+
+            <!-- @print page break style -->
+            <div class="page-break-before-this"></div>
+            <hr/>
+
+            <div class="content">
+                <h3 id="Risk factor configuration">Risk factor configuration</h3>
+                <p>
+                    The score value of a risk factor often depends on the type of vessel and any score is therefore
+                    configurable.
+                </p>
+                <p>
+                    <img src="img/VRMT-factor-configuration.png">
+                </p>
+                <p>
+                    <img src="img/VRMT-factor-configuration-details.png">
+                </p>
+            </div>
+
         </div>
     </div>
 </div>
