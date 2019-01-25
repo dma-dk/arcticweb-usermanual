@@ -1,12 +1,12 @@
 # arcticweb-usermanual
-User manual for the ArcticWeb application. The user manual is a simple HTML page being accompanied
-by CSS, JS and images. The user manual has been separated from the ArcticWeb application, because it is
-important, that ArcticWeb users are only downloading the user manual upon first access or after an update.
+User manual for the Arctic application. The user manual is a simple HTML page being accompanied
+by CSS, JS and images. The user manual has been separated from the Arctic application, because it is
+important, that Arctic users are only downloading the user manual upon first access or after an update.
 This is ensured by maintaining the user manual in a separate project and only generating the usermanual.appcache
 file upon changes to the user manual (in this project).
 
 ## Usage
-The ArcticWeb user manual is build and distributed as a war file. Include it in another web project by adding
+The Arctic user manual is build and distributed as a war file. Include it in another web project by adding
 the following dependency (in another maven web application project)
 
 ```
